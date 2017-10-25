@@ -12,15 +12,15 @@
 <body>
     <div class="back">
         <h1>
-            <i class="fa fa-laptop fa-2x title" aria-hidden="true"></i>
+            <i class="fa fa-paper-plane fa-2x title" aria-hidden="true"></i>
             <br> Jasa Rakit Komputer</h1>
         <br/>
         <div class="main">
             <form action="" method="POST">
                 <div class="innerForm">
-                    <h3 class="titleInner">
+                    <h3 class="titleInner ">
                         Pilih Komponen Komputer
-                        <i class="fa fa-bell left" aria-hidden="true"></i>
+                        <i class="fa fa-plug left" aria-hidden="true"></i>
                     </h3>
                     <hr>
                     <br/>
@@ -58,13 +58,13 @@
                     <br/>
                     <br/>
                     <input type="radio" id="prosesorChoice1" name="prosesor" value="i3" required>
-                    <label for="prosesorChoice1">7th Generation Intel® Core™ i3-7100U</label>
+                    <label class="non-blue" for="prosesorChoice1">7th Generation Intel® Core™ i3-7100U</label>
                     <br/>
                     <input type="radio" id="prosesorChoice2" name="prosesor" value="i5" required>
-                    <label for="prosesorChoice2">7th Generation Intel® Core™ i5-7200U</label>
+                    <label class="non-blue" for="prosesorChoice2">7th Generation Intel® Core™ i5-7200U</label>
                     <br/>
                     <input type="radio" id="prosesorChoice3" name="prosesor" value="i7" required>
-                    <label for="prosesorChoice3">7th Generation Intel® Core™ i7-7500U</label>
+                    <label class="non-blue" for="prosesorChoice3">7th Generation Intel® Core™ i7-7500U</label>
                     <br/>
                     <br/>
                     <br/>
@@ -80,11 +80,11 @@
                     <br/>
                     <br/>
                     <input type="checkbox" id="touchId" name="touch" value="Ya" required>
-                    <label id="labelTouch" for="touchId">Tambahan fitur monitor touchscreen ?</label>
+                    <label class="non-blue" id="labelTouch" for="touchId">Tambahan fitur monitor touchscreen ?</label>
                     <br/>
                     <br/>
 
-                    <button type="submit">Pesan Komputer Sekarang
+                    <button class="btn btn-primary" type="submit">Pesan Komputer Sekarang
                     </button>
                     <br/>
                     <br/>
@@ -98,48 +98,52 @@
     </div>
     <br/>
     <div class="back-table">
-        <table border="1">
+        <table class="table" border="1">
             <h3 class="titleInner tableTitle">List Pesanan Komputer
-                <i class="fa fa-cubes fa-lg left" aria-hidden="true"></i>
+                <i class="fa fa-cogs  fa-lg left" aria-hidden="true"></i>
             </h3>
 
             <!-- faisal -->
-            <tr height="50">
-                <th width="160" class="thTable">Tipe VGA</th>
-                <th width="100" class="thTable">Tipe Hardisk</th>
-                <th width="280" class="thTable">Jenis Prosesor</th>
-                <th width="240" class="thTable">Memory (RAM)</th>
-                <th width="100" class="thTable">Monitor Touchscreen</th>
-            </tr>
+            <thead>
+                <tr height="50">
+                    <th width="160" class="thTable">Tipe VGA</th>
+                    <th width="100" class="thTable">Tipe Hardisk</th>
+                    <th width="280" class="thTable">Jenis Prosesor</th>
+                    <th width="240" class="thTable">Memory (RAM)</th>
+                    <th width="100" class="thTable">Monitor Touchscreen</th>
+                </tr>
+            </thead>
             <br/>
-            <tr align="center" height="50">
-                <td>NVIDIA TITAN X</td>
-                <td>HDD 1 TB</td>
-                <td>7th Generation Intel® Core™ i3-7100U </td>
-                <td>4GB LPDDR3 SDRAM</td>
-                <td>Tidak</td>
-            </tr>
-            <tr align="center" height="50">
-                <td>Radeon RX 480</td>
-                <td>SSD 128 GB</td>
-                <td>7th Generation Intel® Core™ i3-7100U</td>
-                <td>4 GB LPDDR3 SDRAM</td>
-                <td>Ya</td>
-            </tr>
-            <tr align="center" height="50">
-                <td>GeForce GTX 1080 Ti</td>
-                <td>HDD 2 TB</td>
-                <td>7th Generation Intel® Core™ i7-7500U</td>
-                <td>16 GB DDR4 SDRAM</td>
-                <td>Tidak</td>
-            </tr>
-            <tr align="center" height="50">
-                <td>Radeon RX 470</td>
-                <td>SSD 128 GB</td>
-                <td>7th Generation Intel® Core™ i5-7200U</td>
-                <td>16 GB DDR4 SDRAM </td>
-                <td>Tidak</td>
-            </tr>
+            <tbody>
+                <tr class="info" align="center" height="50">
+                    <td>NVIDIA TITAN X</td>
+                    <td>HDD 1 TB</td>
+                    <td>7th Generation Intel® Core™ i3-7100U </td>
+                    <td>4GB LPDDR3 SDRAM</td>
+                    <td>Tidak</td>
+                </tr>
+                <tr align="center" height="50">
+                    <td>Radeon RX 480</td>
+                    <td>SSD 128 GB</td>
+                    <td>7th Generation Intel® Core™ i3-7100U</td>
+                    <td>4 GB LPDDR3 SDRAM</td>
+                    <td>Ya</td>
+                </tr>
+                <tr align="center" height="50">
+                    <td>GeForce GTX 1080 Ti</td>
+                    <td>HDD 2 TB</td>
+                    <td>7th Generation Intel® Core™ i7-7500U</td>
+                    <td>16 GB DDR4 SDRAM</td>
+                    <td>Tidak</td>
+                </tr>
+                <tr align="center" height="50">
+                    <td>Radeon RX 470</td>
+                    <td>SSD 128 GB</td>
+                    <td>7th Generation Intel® Core™ i5-7200U</td>
+                    <td>16 GB DDR4 SDRAM </td>
+                    <td>Tidak</td>
+                </tr>
+            </tbody>
         </table>
     </div>
     <br/>
