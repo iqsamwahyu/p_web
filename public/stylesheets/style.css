@@ -1,8 +1,6 @@
 body {
   padding: 40px;
   font-size: 15px;
-  /* background-image: url("../images/pic3.jpeg"); */
-  /* background-color: #EEEEEE; */
 }
 
 @font-face {
@@ -25,7 +23,8 @@ form {
   -moz-box-shadow: 1px 3px 37px 1px rgba(0, 0, 0, 0.56);
   box-shadow: 1px 3px 50px 8px rgba(0, 0, 0, 0.56);
   background-color: white;
-  margin-right: 400px;
+  width: 37.5%;
+ 
   margin-bottom: 70px;
   color: #0277BD;
 }
@@ -45,7 +44,9 @@ h1 {
 }
 
 .main {
-  margin-left: 400px;
+ width:100%;
+ align-content: center;
+ margin-left: 390px;
 }
 
 h1,
@@ -189,7 +190,7 @@ tr:nth-child(even) {
   margin-bottom: 0;
   font-weight: normal;
   text-align: center;
-  border: 1px solid transparent;  
+  border: 1px solid transparent;
   padding: 6px 16px;
   font-size: 13px;
   line-height: 1.846;
@@ -197,7 +198,6 @@ tr:nth-child(even) {
   text-transform: uppercase;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-
 }
 
 .btn-primary {
@@ -206,15 +206,32 @@ tr:nth-child(even) {
   border-color: transparent;
 }
 
-th{
-  color:white;
-  text-align: center;
-}
-td{
+th {
+  color: white;
   text-align: center;
 }
 
-.non-blue
- {
+td {
+  text-align: center;
+}
+
+.non-blue {
   color: #263238;
+}
+
+@media  (max-width: 1000px) {
+ 
+  form {
+  
+    width: 53%;
+    /* background-color: black; */
+   
+  }
+
+  .main {
+    width:100%;
+    align-content: center;
+    margin-left: 220px;
+   }
+
 }

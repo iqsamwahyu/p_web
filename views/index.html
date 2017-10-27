@@ -4,8 +4,7 @@
 <head>
     <title>List Laptop</title>
     <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="stylesheet" href="/font-awesome/css/font-awesome.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
 </head>
 
@@ -16,7 +15,7 @@
             <br> Jasa Rakit Komputer</h1>
         <br/>
         <div class="main">
-            <form action="" method="POST">
+            <form name="form-rakit" action="" method="POST">
                 <div class="innerForm">
                     <h3 class="titleInner ">
                         Pilih Komponen Komputer
@@ -26,16 +25,13 @@
                     <br/>
                     <label class="inputLabel" for="">
                         <i class="fa fa-arrow-circle-right right" aria-hidden="true"></i>
-
                         <b>Tipe VGA : </b>
                     </label>
-
-                    <select name="merkVGA" required>
+                    <select name="merkVGA">
                         <option value="" selected disabled hidden>Pilih Tipe VGA</option>
                         <option value="1">GeForce GTX 1080 Ti</option>
                         <option value="2">NVIDIA TITAN X</option>
                         <option value="3">Radeon RX 480</option>
-                        <!-- Agung -->
                         <option value="4">Radeon RX 470</option>
                     </select>
                     <br/>
@@ -46,8 +42,7 @@
                         <b>Tipe Hardisk : </b>
                     </label>
                     <br/>
-
-                    <input class="text_input" placeholder="Contoh HDD 500 GB" type="text" name="tipeHardisk" required>
+                    <input class="text_input" placeholder="Contoh HDD 500 GB" type="text" name="tipeHardisk">
                     <br/>
                     <br/>
                     <br/>
@@ -57,13 +52,13 @@
                     </label>
                     <br/>
                     <br/>
-                    <input type="radio" id="prosesorChoice1" name="prosesor" value="i3" required>
+                    <input type="radio" id="prosesorChoice1" name="prosesor" value="i3">
                     <label class="non-blue" for="prosesorChoice1">7th Generation Intel® Core™ i3-7100U</label>
                     <br/>
-                    <input type="radio" id="prosesorChoice2" name="prosesor" value="i5" required>
+                    <input type="radio" id="prosesorChoice2" name="prosesor" value="i5">
                     <label class="non-blue" for="prosesorChoice2">7th Generation Intel® Core™ i5-7200U</label>
                     <br/>
-                    <input type="radio" id="prosesorChoice3" name="prosesor" value="i7" required>
+                    <input type="radio" id="prosesorChoice3" name="prosesor" value="i7">
                     <label class="non-blue" for="prosesorChoice3">7th Generation Intel® Core™ i7-7500U</label>
                     <br/>
                     <br/>
@@ -72,28 +67,21 @@
                         <i class="fa fa-arrow-circle-right right" aria-hidden="true"></i>
                         <b>Memory (RAM) :</b>
                     </label>
-
-                    <!-- Nisa -->
-
                     <br/>
-                    <input class="text_input" placeholder="Contoh 4GB DDR4 SDRAM" type="text" name="jenisRAM" required>
+                    <input class="text_input" placeholder="Contoh 4GB DDR4 SDRAM" type="text" name="jenisRAM">
                     <br/>
                     <br/>
-                    <input type="checkbox" id="touchId" name="touch" value="Ya" required>
-                    <label class="non-blue" id="labelTouch" for="touchId">Tambahan fitur monitor touchscreen ?</label>
+                    <input type="checkbox" id="touchId" name="touch" value="Ya">
+                    <label class="non-blue" id="labelTouch" for="touchId">Fitur monitor touchscreen (optional) ?</label>
                     <br/>
                     <br/>
-
-                    <button class="btn btn-primary" type="submit">Pesan Komputer Sekarang
+                    <button onclick="return cekValidasi()" class="btn btn-primary" type="submit">Pesan Komputer Sekarang
                     </button>
                     <br/>
                     <br/>
                     <br/>
-
-
                 </div>
             </form>
-
         </div>
     </div>
     <br/>
@@ -102,47 +90,12 @@
             <h3 class="titleInner tableTitle">List Pesanan Komputer
                 <i class="fa fa-cogs  fa-lg left" aria-hidden="true"></i>
             </h3>
-
-            <!-- faisal -->
             <thead>
-                <tr height="50">
-                    <th width="160" class="thTable">Tipe VGA</th>
-                    <th width="100" class="thTable">Tipe Hardisk</th>
-                    <th width="280" class="thTable">Jenis Prosesor</th>
-                    <th width="240" class="thTable">Memory (RAM)</th>
-                    <th width="100" class="thTable">Monitor Touchscreen</th>
+                <tr height="50" id="table-regenerate-head">
                 </tr>
             </thead>
             <br/>
-            <tbody>
-                <tr class="info" align="center" height="50">
-                    <td>NVIDIA TITAN X</td>
-                    <td>HDD 1 TB</td>
-                    <td>7th Generation Intel® Core™ i3-7100U </td>
-                    <td>4GB LPDDR3 SDRAM</td>
-                    <td>Tidak</td>
-                </tr>
-                <tr align="center" height="50">
-                    <td>Radeon RX 480</td>
-                    <td>SSD 128 GB</td>
-                    <td>7th Generation Intel® Core™ i3-7100U</td>
-                    <td>4 GB LPDDR3 SDRAM</td>
-                    <td>Ya</td>
-                </tr>
-                <tr align="center" height="50">
-                    <td>GeForce GTX 1080 Ti</td>
-                    <td>HDD 2 TB</td>
-                    <td>7th Generation Intel® Core™ i7-7500U</td>
-                    <td>16 GB DDR4 SDRAM</td>
-                    <td>Tidak</td>
-                </tr>
-                <tr align="center" height="50">
-                    <td>Radeon RX 470</td>
-                    <td>SSD 128 GB</td>
-                    <td>7th Generation Intel® Core™ i5-7200U</td>
-                    <td>16 GB DDR4 SDRAM </td>
-                    <td>Tidak</td>
-                </tr>
+            <tbody id="table-regenerate-body">
             </tbody>
         </table>
     </div>
@@ -152,3 +105,105 @@
 </body>
 
 </html>
+<script>
+    /**     
+     * Defisi Variable text untuk innerHTML     
+     */
+
+    let textHead = '';
+    let textBody = '';
+
+    /**         
+     * Membuat Data Hardcoded untuk dimasukan ke dalam table header <th>      
+     */
+
+    const allDataHead = ['Tipe VGA', 'Tipe Hardisk', 'Jenis Prosesor', 'Memory (RAM)', 'Monitor Touchscreen'];
+
+    /**         
+     * Membuat Data Hardcoded untuk dimasukan ke dalam table data <td>         
+     */
+
+    const allDataBody = [
+        ['NVIDIA TITAN X', 'Radeon RX 480', 'GeForce GTX 1080 Ti', 'Radeon RX 470'],
+        ['HDD 1 TB', 'SSD 128 GB', 'HDD 2 TB', 'SSD 128 GB'],
+        ['7th Generation Intel® Core™ i3-7100U ', '7th Generation Intel® Core™ i3-7100U',
+            '7th Generation Intel® Core™ i7-7500U', '7th Generation Intel® Core™ i5-7200U'
+        ],
+        ['4GB LPDDR3 SDRAM', '4 GB LPDDR3 SDRAM', '16 GB DDR4 SDRAM', '16 GB DDR4 SDRAM'],
+        ['Tidak', 'Ya', 'Tidak', 'Ya']
+    ]
+
+
+    /**    
+     *  Membuat Looping dari variable allDataHead 
+     *  sebagai header judul dari setiap kolom table      
+     */
+
+    for (let z = 0; z < allDataHead.length; z++) {
+        textHead +=
+            `<th width="160" class="thTable"> ${allDataHead[z]} </th> `;
+    }
+
+    /**     
+     * Menyematkan nilai html dari perulangan allDataHead sebelumnya 
+     */
+
+    document.getElementById("table-regenerate-head").innerHTML = textHead;
+
+    /**    
+     *  Membuat Looping dari variable allDataBody 
+     *  sebagai isi data dari table       
+     */
+
+    for (let i = 0; i < allDataBody.length - 1; i++) {
+
+        textBody +=
+            `<tr>
+                <td> ${allDataBody[0][i]} </td> <td> ${allDataBody[1][i]} </td> 
+                <td> ${allDataBody[2][i]} </td><td> ${allDataBody[3][i]} </td> 
+                <td> ${allDataBody[4][i]} </td>
+             </tr>`;
+    }
+
+    /**     
+     * Menyematkan nilai html dari perulangan allDataBody sebelumnya 
+     */
+
+    document.getElementById("table-regenerate-body").innerHTML = textBody;
+
+    /**     
+     * Cek validasi Form dipanggil saat submit button
+     * ditekan
+     */
+
+    function cekValidasi() {
+
+        // mengambil element form yang bernama form-rakit
+        var elementForm = document.forms["form-rakit"];
+
+        /**
+         * pengecekan seluruh element form 
+         * dengan array value dan dengan nama          
+         **/
+        if (elementForm[0].value === '') {
+            alert("Isi Tipe VGA dengan benar!");
+            return false;
+        } else if (elementForm[1].value === '') {
+            alert("Isi Tipe hardisk dengan benar!");
+            return false;
+        } else if (elementForm["prosesor"].value === '') {
+            alert("Isi Tipe Prosesor dengan benar!");
+            return false;
+        } else if (elementForm[5].value === '') {
+            alert("Memory ram dengan benar!");
+            return false;
+        }
+
+        /**
+         * Untuk pesan jika semua form telah terisi.
+         **/
+
+        alert("Terima kasih Pesanan Diterima");
+        return true;
+    }
+</script>
