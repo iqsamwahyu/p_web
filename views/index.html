@@ -106,23 +106,12 @@
 
 </html>
 <script type="text/javascript">
-    /**     
-     * Defisi Variable text untuk innerHTML     
-     */
-
     let textHead = '';
     let textBody = '';
-
-    /**         
-     * Membuat Data Hardcoded untuk dimasukan ke dalam table header <th>      
-     */
-
-    const allDataHead = ['Tipe VGA', 'Tipe Hardisk', 'Jenis Prosesor', 'Memory (RAM)', 'Monitor Touchscreen'];
-
-    /**         
-     * Membuat Data Hardcoded untuk dimasukan ke dalam table data <td>         
-     */
-
+ 
+    const allDataHead = ['Tipe VGA', 'Tipe Hardisk', 'Jenis Prosesor',
+     'Memory (RAM)', 'Monitor Touchscreen'];
+     
     const allDataBody = [
         ['NVIDIA TITAN X', 'Radeon RX 480', 'GeForce GTX 1080 Ti', 'Radeon RX 470'],
         ['HDD 1 TB', 'SSD 128 GB', 'HDD 2 TB', 'SSD 128 GB'],
@@ -133,30 +122,14 @@
         ['Tidak', 'Ya', 'Tidak', 'Ya']
     ]
 
-
-    /**    
-     *  Membuat Looping dari variable allDataHead 
-     *  sebagai header judul dari setiap kolom table      
-     */
-
     for (let z = 0; z < allDataHead.length; z++) {
         textHead +=
             `<th width="160" class="thTable"> ${allDataHead[z]} </th> `;
     }
 
-    /**     
-     * Menyematkan nilai html dari perulangan allDataHead sebelumnya 
-     */
-
     document.getElementById("table-regenerate-head").innerHTML = textHead;
 
-    /**    
-     *  Membuat Looping dari variable allDataBody 
-     *  sebagai isi data dari table       
-     */
-
     for (let i = 0; i < allDataBody.length - 1; i++) {
-
         textBody +=
             `<tr>
                 <td> ${allDataBody[0][i]} </td> <td> ${allDataBody[1][i]} </td> 
@@ -165,26 +138,12 @@
              </tr>`;
     }
 
-    /**     
-     * Menyematkan nilai html dari perulangan allDataBody sebelumnya 
-     */
-
     document.getElementById("table-regenerate-body").innerHTML = textBody;
 
-    /**     
-     * Cek validasi Form dipanggil saat submit button
-     * ditekan
-     */
-
     function cekValidasi() {
-
-        // mengambil element form yang bernama form-rakit
+        
         var elementForm = document.forms["form-rakit"];
 
-        /**
-         * pengecekan seluruh element form 
-         * dengan array value dan dengan nama          
-         **/
         if (elementForm[0].value === '') {
             alert("Isi Tipe VGA dengan benar! 😑");
             return false;
@@ -198,11 +157,7 @@
             alert("Isi Memory ram dengan benar! 😫");
             return false;
         }
-
-        /**
-         * Untuk pesan jika semua form telah terisi.
-         **/
-
+        
         alert("Terima kasih Pesanan Diterima 😉 ");
         return true;
     }
