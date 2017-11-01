@@ -186,6 +186,11 @@ tr:nth-child(even) {
 }
 
 .btn {
+  padding: 15px;
+  margin-left: 75px;
+  margin-top: 17px;
+  background-color: #E0E0E0;
+  font-size: 15px;
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
