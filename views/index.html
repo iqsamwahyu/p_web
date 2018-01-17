@@ -1,162 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>List Laptop</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Table yeah</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <div class="back">
-        <h1>
-            <i class="fa fa-paper-plane fa-2x title" aria-hidden="true"></i>
-            <br> Jasa Rakit Komputer</h1>
-        <br/>
-        <div class="main">
-            <form name="form-rakit" action="" method="POST">
-                <div class="innerForm">
-                    <h3 class="titleInner ">
-                        Pilih Komponen Komputer
-                        <i class="fa fa-plug left" aria-hidden="true"></i>
-                    </h3>
-                    <hr>
-                    <br/>
-                    <label class="inputLabel" for="">
-                        <i class="fa fa-arrow-circle-right right" aria-hidden="true"></i>
-                        <b>Tipe VGA : </b>
-                    </label>
-                    <select name="merkVGA">
-                        <option value="" selected disabled hidden>Pilih Tipe VGA</option>
-                        <option value="1">GeForce GTX 1080 Ti</option>
-                        <option value="2">NVIDIA TITAN X</option>
-                        <option value="3">Radeon RX 480</option>
-                        <option value="4">Radeon RX 470</option>
-                    </select>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <label class="inputLabel" for="">
-                        <i class="fa fa-arrow-circle-right right" aria-hidden="true"></i>
-                        <b>Tipe Hardisk : </b>
-                    </label>
-                    <br/>
-                    <input class="text_input" placeholder="Contoh HDD 500 GB" type="text" name="tipeHardisk">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <label class="inputLabel" for="">
-                        <i class="fa fa-arrow-circle-right right" aria-hidden="true"></i>
-                        <b>Pilih Jenis Prosessor : </b>
-                    </label>
-                    <br/>
-                    <br/>
-                    <input type="radio" id="prosesorChoice1" name="prosesor" value="i3">
-                    <label class="non-blue" for="prosesorChoice1">7th Generation Intel® Core™ i3-7100U</label>
-                    <br/>
-                    <input type="radio" id="prosesorChoice2" name="prosesor" value="i5">
-                    <label class="non-blue" for="prosesorChoice2">7th Generation Intel® Core™ i5-7200U</label>
-                    <br/>
-                    <input type="radio" id="prosesorChoice3" name="prosesor" value="i7">
-                    <label class="non-blue" for="prosesorChoice3">7th Generation Intel® Core™ i7-7500U</label>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <label class="inputLabel" for="">
-                        <i class="fa fa-arrow-circle-right right" aria-hidden="true"></i>
-                        <b>Memory (RAM) :</b>
-                    </label>
-                    <br/>
-                    <input class="text_input" placeholder="Contoh 4GB DDR4 SDRAM" type="text" name="jenisRAM">
-                    <br/>
-                    <br/>
-                    <input type="checkbox" id="touchId" name="touch" value="Ya">
-                    <label class="non-blue" id="labelTouch" for="touchId">Fitur monitor touchscreen (optional) ?</label>
-                    <br/>
-                    <br/>              
-                    <input TYPE="BUTTON" NAME="tombolProses" class="btn btn-primary" VALUE="Pesan Komputer Sekarang" onClick="cekValidasi()"/>
+    <table border="1">
+        <caption>Table Kursus</caption>
+        <tr>
+            <th rowspan="2">Nama</th>
+            <th colspan="2">Materi</th>
+            <th colspan="2">IPK</th>
+        </tr>
+        <tr>
+            <th>Workshop</th>
+            <th>Kursus</th>
+            <th>Lokal</th>
+            <th>Utama</th>
+        </tr>
+        <tr>
+            <td>Adi</td>
+            <td id="xmlAdi">Introduction to XML</td>
+            <td id="webaspAdi">Web Programing with ASP</td>
+            <td>3.23</td>
+            <td>3.47</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Ani</td>
+            <td  id="VBSQL">Visual Basic With Database</td>
+            <td class="VBSQLServer" rowspan="2">Visual Basic With SQL Server</td>
+            <td rowspan="2">3.53</td>
+            <td rowspan="2">3.64</td>
+        </tr>
+        <tr>
+            <td id="aniOracle" >Oracle Developer Report</td>
+        </tr>
+        <tr>
+            <td  rowspan="2">Ali</td>
+            <td class="VBSQL" rowspan="2">Visual Basic With Database</td>
+            <td>Introduction to Oracle: SQL and PL/SQL</td>
+            <td rowspan="2">3.66</td>
+            <td rowspan="2">3.39</td>
+        </tr>
+        <tr>
+            <td class="VBSQLServer">Visual Basic With SQL Server</td>
+        </tr>
+    </table>
 
-            </FORM>
-            <br/>
-            <br/>
-            <br/>
-            </div>
-            </form>
-        </div>
-    </div>
-    <br/>
-    <div class="back-table">
-        <table class="table" border="1">
-            <h3 class="titleInner tableTitle">List Pesanan Komputer
-                <i class="fa fa-cogs  fa-lg left" aria-hidden="true"></i>
-            </h3>
-            <thead>
-                <tr height="50" id="table-header-build">
-                </tr>
-            </thead>
-            <br/>
-            <tbody id="table-body-build">
-            </tbody>
-        </table>
-    </div>
-    <br/>
-    <br/>
-    <br/>
+
 </body>
 
 </html>
-<script type="text/javascript">
-    function cekValidasi() {
-        var elementForm = document.forms["form-rakit"];
-        
-        if (elementForm[0].value === '') {
-            alert("Isi Tipe VGA dengan benar! 😑");
-            return false;
-        } else if (elementForm[1].value === '') {
-            alert("Isi Tipe hardisk dengan benar! 😣");
-            return false;
-        } else if (elementForm["prosesor"].value === '') {
-            alert("Isi Tipe Prosesor dengan benar! 😩");
-            return false;
-        } else if (elementForm[5].value === '') {
-            alert("Isi Memory ram dengan benar! 😫");
-            return false;
-        } 
-        
-        alert("Terima kasih Pesanan Diterima 😉 ");
-        tampilkanTable();
-        return true;
-       
-        function tampilkanTable() {
-            let headerText = '';
-            let bodyText = '';
-            const headerDataArray = ['Tipe VGA', 'Tipe Hardisk', 'Jenis Prosesor',
-                'Memory (RAM)', 'Monitor Touchscreen'
-            ];
-            for (let z = 0; z < headerDataArray.length; z++) {
-                headerText +=
-                    `<th width="160" class="thTable"> ${headerDataArray[z]} </th> `;
-            }
-            document.getElementById("table-header-build").innerHTML = headerText;
-            
-            const bodyDataArray = [
-                ['NVIDIA TITAN X', 'Radeon RX 480', 'GeForce GTX 1080 Ti', 'Radeon RX 470'],
-                ['HDD 1 TB', 'SSD 128 GB', 'HDD 2 TB', 'SSD 128 GB'],
-                ['7th Generation Intel® Core™ i3-7100U ', '7th Generation Intel® Core™ i3-7100U',
-                    '7th Generation Intel® Core™ i7-7500U', '7th Generation Intel® Core™ i5-7200U'
-                ],
-                ['4GB LPDDR3 SDRAM', '4 GB LPDDR3 SDRAM', '16 GB DDR4 SDRAM', '16 GB DDR4 SDRAM'],
-                ['Tidak', 'Ya', 'Tidak', 'Ya']
-            ]
-
-            for (let i = 0; i < bodyDataArray[0].length; i++) {
-                bodyText +=
-                    `<tr>
-                <td> ${bodyDataArray[0][i]} </td> <td> ${bodyDataArray[1][i]} </td> 
-                <td> ${bodyDataArray[2][i]} </td><td> ${bodyDataArray[3][i]} </td> 
-                <td> ${bodyDataArray[4][i]} </td>
-             </tr>`;
-            }
-            document.getElementById("table-body-build").innerHTML = bodyText;
-        }
-    }
-</script>
